@@ -26,3 +26,5 @@ If you are unfamiliar with the algorithm, please explore the example files first
 # Contribution and Citation 
 
 I'm happy for every kind of contribution to the project. If you find this useful for your research, a paper reference will be available here shortly.
+
+*<p align="center">This project is published under [MIT](LICENSE).</p>*
