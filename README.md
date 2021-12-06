@@ -42,4 +42,4 @@ Explanation for the input parameters of the main GhPython component:
 
 I'm happy for every kind of contribution to the project. If you find this useful for your research, a paper reference will be available here shortly.
 
-This project is published under [MIT](/C:/Program%20Files/Joplin/resources/app.asar/LICENSE "LICENSE").
+*<p align="center">This project is published under [MIT](LICENSE).</p>*
