@@ -2,7 +2,7 @@
 
 A GhPython algorithm for shape and size optimization that dynamically visualises ossification principles, including osteoblast and osteoclast movement.
 
-![](name-of-giphy.gif)
+![](animation.gif)
 
 # Setup
 
