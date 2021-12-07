@@ -11,9 +11,13 @@ software requirements:
 - Rhino 6 SR35
 - Karamba3D 1.3.3
 
-# Usage
+To test the algorithm simply open the .gh file and increase the iteration slider plugged into the main GhPython component.
 
-If you are unfamiliar with the algorithm, please explore the example files first.
+If you are unfamiliar with the algorithm, please explore the sample files first. The main .gh file might be unstable.
+
+The file "GhPython_dump.py" is not a standalone version. In the current stage it only serves the understanding of the algorithm.
+
+# Usage
 
 Explanation for the input parameters of the main GhPython component:
 
