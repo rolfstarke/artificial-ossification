@@ -24,9 +24,9 @@ Explanation for the input parameters of the main GhPython component:
 - beam_divisions 
     - Determines the number of evenly spaced probe points on each beam, visible by the agents.
 - agent\_vision\_radius_factor
-    - The agent vision range is set in relation to the overall geometry scale, but can be modified by this slider.
+    - The agent vision range is set in relation to the overall geometry scale, but can be modified by this factor.
 - agent\_effect\_radius_factor
-    - The agent effect range is set in relation to the overall geometry scale, but can be modified by this slider.
+    - The agent effect range is set in relation to the overall geometry scale, but can be modified by this factor.
 - osteoblast_number
     - self-explainatory
 - osteoclast_number
