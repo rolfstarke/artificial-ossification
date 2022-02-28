@@ -1,0 +1,45 @@
+Tis pseudocode tries to illustrate the agent behaviour in a chronological manner and is a drastic simplification of the original object-oriented code. For model initialization, setup and tension calculation please refer to the paper or the original source code
+
+START 
+
+FOR every iteration
+  FOR every agent 
+    // agent movement 
+    FOR every probePoint  
+      IF distance agent to probePoint < agent vision 
+        IF probePoint tension > current target tension // only for osteoblasts          
+          IF probePoint tension < current target tension // only for osteoclasts 
+            IF probePoint not occupied 
+              target = probePoint 
+    step = vector(agentPosition, target) * speed input/ length(agentPosition, target) 
+    agentPosition = agentPosition + step 
+    // cross-section modification 
+    FOR every probePoint 
+      IF distance(agentPosition, probePoint) < agent effect radius 
+        IF distance(agentPosition, probePoint) < current minimum 
+          IF probePoint cross-section > cross-section threshold // only for osteoclasts 
+            closestPoint = probePoint 
+    closestPoint cross-section radius += agent modification // only for osteoblasts 
+    closestPoint cross-section radius -= agent modification // only for osteoclasts 
+    recalculate tension for closestPoint 
+    // axis shift 
+    closestBeam = beam corresponding to closestPoint 
+    IF distance(agentPosition, closestBeamVertice1) > distance(agentPosition, closestBeamVertice2)   
+      rotationCenter = closestBeamVertice1 
+      verticeToRotate = closestBeamVertice2 
+    ELSE 
+      rotationCenter = closestBeamVertice2 
+      verticeToRotate = closestBeamVertice1 
+    IF verticeToRotate ≠ Support  
+      IF verticeToRotate ≠ loadPoint 
+        startDirection = rotationCenter - closestPoint equivalent on beam moment line 
+        endDirection = rotationCenter - closestPoint 
+    shiftedVertice = verticeToRotate.rotate(startDirection, endDirection, rotationCenter) 
+  // rebuild and recalculate model 
+  FOR every node 
+    nodePosition = sum of all shiftedVertices/ number of vertices 
+  rebuild latticework with new nodePositions 
+  recalculate internal forces with FEM 
+  recalculate tension at probePoints 
+
+END 
